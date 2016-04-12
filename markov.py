@@ -1,6 +1,7 @@
 from random import choice
 
 
+
 def open_and_read_file(file_path):
     """Takes file path as string; returns text as string.
 
@@ -9,8 +10,12 @@ def open_and_read_file(file_path):
     """
 
     # your code goes here
+    the_file = file_path
+    contents = open(the_file).read()
+    
+    return contents
 
-    return "This should be a variable that contains your file text as one long string"
+
 
 
 def make_chains(text_string):
@@ -27,10 +32,19 @@ def make_chains(text_string):
     """
 
     chains = {}
+    words = text_string.split()
+    
+    
+    for i in range(len(words) - 1):
+        two_words = words[i], words[i + 1]
 
-    # your code goes here
+        #take these tuples and evaluate if they are in the dict 
+        chains[two_words] = 1
+
+    print chains
 
     return chains
+
 
 
 def make_text(chains):
@@ -52,6 +66,6 @@ input_text = open_and_read_file(input_path)
 chains = make_chains(input_text)
 
 # Produce random text
-random_text = make_text(chains)
+py = make_text(chains)
 
-print random_text
+#print random_text
