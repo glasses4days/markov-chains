@@ -37,9 +37,15 @@ def make_chains(text_string):
     
     for i in range(len(words) - 1):
         two_words = words[i], words[i + 1]
-
-        #take these tuples and evaluate if they are in the dict 
-        chains[two_words] = 1
+        #options =  []
+        print words[i], words[i + 2]
+        #this puts the tuples into the dictionary as keys
+        chains[two_words] = [] # this empty list was for the list of values
+        #how do we get them in there? i+2 gives us "out of range error"
+    
+    # words_list_value = []
+    # for i in range(len(words) - 1):
+    #     words_list_value = words[i + 2]
 
     print chains
 
