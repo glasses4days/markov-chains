@@ -34,14 +34,18 @@ def make_chains(text_string):
     chains = {}
     words = text_string.split()
     
-    
-    for i in range(len(words) - 1):
+    #this sets our range to end at the second to last item 
+    #this is important because we need to avoid IndexError: list out of range
+    for i in range(len(words) - 2):
         two_words = words[i], words[i + 1]
-        #options =  []
-        print words[i], words[i + 2]
-        #this puts the tuples into the dictionary as keys
-        chains[two_words] = [] # this empty list was for the list of values
-        #how do we get them in there? i+2 gives us "out of range error"
+        third_words = words[i + 2]
+        
+        if two_words not in chains:
+            #this puts the tuples into the dictionary as keys and 
+            #initial third words as values
+            chains[two_words] = [third_words]
+        else:
+        
     
     # words_list_value = []
     # for i in range(len(words) - 1):
