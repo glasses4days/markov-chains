@@ -57,28 +57,43 @@ def make_text(chains):
     #text = empty string to put all our text in eventually
     text = ""
     #the initial key is a random choice (see import random choice at top of program)
+    #the only random key we will have
     initial_key = choice(chains.keys())
     #grabs an random value from the list of values for the initial key
     initial_value = choice(chains[initial_key])
     # print initial_key
     # print initial_value
-
+    #adds the initial_key and initial_value to the text string with spaces
+    #use join because initial_key is a tuple
     text = " ".join(initial_key) + " " + initial_value
     #text = text + " " + initial_value
     print text
-    # while initial_key in chains:
-    split the text at spaces and make it a list
-    then take the last two items from the list
-    new_key = text[1], text[2]
-    print new_key
-    # for new_key in chains:
-    #         chains[new_key] = chains.get(new_key, 0) +1
+    
+    #sets up next key as a tuple made from inital_key index 1 and initial value
+    next_key = (initial_key[1], initial_value)
+    print next_key
+
+    
+    while True:
+        current_key = next_key
+
+        if current_key in chains:
 
 
-    #this puts the tuples into the dictionary as keys
-    #while initial_key is in dictionary
-    #choice(chains.values[from the list that goes with that key])
+        else:
+            False
+    # and then look for them as a key in the dictionary
+    # then check for that new key in the chains dictionary
+    # and if its there chose a random value from that key
+    # and got through the above again and again....
+    # code idea below
+    # while initial_key in chains:  
+    for new_key in chains:
+            chains[new_key] = chains.get(choice([initial_key])
+            (new_key) + initial_value
 
+    each time we go throuhg the loop, if the new key is in th dictionary
+    we want to choose a random value from that key and add the items to the text 
     return text
 
 
