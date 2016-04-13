@@ -45,16 +45,10 @@ def make_chains(text_string):
             #initial third words as values
             chains[two_words] = [third_words]
         else:
-        
-    
-    # words_list_value = []
-    # for i in range(len(words) - 1):
-    #     words_list_value = words[i + 2]
-
-    print chains
+            #if key exists, appends additional values to third_words list
+            chains[two_words].append(third_words)
 
     return chains
-
 
 
 def make_text(chains):
