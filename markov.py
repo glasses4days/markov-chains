@@ -58,15 +58,26 @@ def make_text(chains):
     text = ""
     #the initial key is a random choice (see import random choice at top of program)
     initial_key = choice(chains.keys())
+    #grabs an random value from the list of values for the initial key
+    initial_value = choice(chains[initial_key])
+    # print initial_key
+    # print initial_value
 
-    
+    text = " ".join(initial_key) + " " + initial_value
+    #text = text + " " + initial_value
+    print text
+    # while initial_key in chains:
+    split the text at spaces and make it a list
+    then take the last two items from the list
+    new_key = text[1], text[2]
+    print new_key
+    # for new_key in chains:
+    #         chains[new_key] = chains.get(new_key, 0) +1
 
-    
-    initial_value = choice(chains(initial_key.values(i)))
 
     #this puts the tuples into the dictionary as keys
-    while initial_key is in dictionary
-        choice(chains.values[from the list that goes with that key])
+    #while initial_key is in dictionary
+    #choice(chains.values[from the list that goes with that key])
 
     return text
 
