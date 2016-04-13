@@ -54,9 +54,19 @@ def make_chains(text_string):
 def make_text(chains):
     """Takes dictionary of markov chains; returns random text."""
 
+    #text = empty string to put all our text in eventually
     text = ""
+    #the initial key is a random choice (see import random choice at top of program)
+    initial_key = choice(chains.keys())
 
-    # your code goes here
+    
+
+    
+    initial_value = choice(chains(initial_key.values(i)))
+
+    #this puts the tuples into the dictionary as keys
+    while initial_key is in dictionary
+        choice(chains.values[from the list that goes with that key])
 
     return text
 
